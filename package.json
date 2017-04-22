@@ -1,1 +1,38 @@
-{     "devDependencies": {         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmdoc-rangeslider.js",     "homepage": "https://github.com/npmdoc/node-npmdoc-rangeslider.js",     "repository": {         "type": "git",         "url": "https://github.com/npmdoc/node-npmdoc-rangeslider.js.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "#### api documentation for  [rangeslider.js (v2.3.0)](https://github.com/andreruffert/rangeslider.js)  [![npm package](https://img.shields.io/npm/v/npmdoc-rangeslider.js.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-rangeslider.js) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-rangeslider.js.svg)](https://travis-ci.org/npmdoc/node-npmdoc-rangeslider.js)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-rangeslider.js",
+    "keywords": [
+        "documentation",
+        "rangeslider.js"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_rangeslider.js.js",
+    "name": "npmdoc-rangeslider.js",
+    "nameAlias": "npmdoc_rangeslider_js",
+    "nameOriginal": "npmdoc-rangeslider.js",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmdoc/node-npmdoc-rangeslider.js.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "2017.4.23"
+}
